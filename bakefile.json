@@ -1,0 +1,32 @@
+{
+    /* bakefile.json - example build file */
+
+    "exclude_files" : "",
+
+    "pre_execute" : "",
+
+    "post_execute" :  "",
+
+    "output_dir" : "website",
+
+    "static_dir" : "static",
+
+    "header": "header.html",
+
+    "footer": "footer.html",
+
+    "pages" : ["index.html", "home.html"],
+
+    "flags" : {
+
+        "publish" :
+        {
+            "publish" : "true",
+            "archive" : "true",
+            "publish_server" : "ftp.server.com",
+            "publish_type" : "ftp",
+            "uid" : "uid",
+            "pwd" : "pwd"
+        }
+    }
+}
