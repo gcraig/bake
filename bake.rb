@@ -155,19 +155,20 @@ class Bake
   # Display bake's command line usage
   #
   def display_usage
-    $stderr.puts "Usage: #{File.basename($0)}: [-l <file] [-v] ..."
-    $stderr.puts 'bake builds and concatenates static websites from a list of templates'
-    $stderr.puts 'Copyright 2014. CSR Development, Co. Distributed under the GNU General Public License.'
-    $stderr.puts 'This program comes with ABSOLUTELY NO WARRANTY; this is free software, and you are welcome to '
-    $stderr.puts 'redistribute it under certain conditions.'
-    $stderr.puts 'Options:'
-    $stderr.puts '  -e, --version     outputs version and exit'
-    $stderr.puts '  -f, --file        bakefile (if specifying build file other than bakefile.json)'
-    $stderr.puts '  -h, --help        displays this help and exit'
-    $stderr.puts '  -p, --push        pushes website out to destination (-d required if bakefile.json not present)'
-    $stderr.puts '  -d, --dest        destination [protocol:server:uid:pwd]'
-    $stderr.puts '  -v, --verbose     outputs debugging information'
-    $stderr.puts '  -l, --log <file>  captures all output to file'
+    $stderr.puts "Usage: #{File.basename($0)}: [-l <file>] [-v] ..."
+    $stderr.puts "bake builds and concatenates static websites from a list of templates"
+    $stderr.puts "Copyright 2014. CSR Development, Co. Distributed under the GNU General Public License."
+    $stderr.puts "This program comes with ABSOLUTELY NO WARRANTY; this is free software, and you are welcome to "
+    $stderr.puts "redistribute it under certain conditions."
+    $stderr.puts "Options:"
+    $stderr.puts "  -e, --version     outputs version and exit"
+    $stderr.puts "  -f, --file        bakefile (if specifying build file other than bakefile.json)"
+    $stderr.puts "  -h, --help        displays this help and exit"
+    $stderr.puts "  -p, --push        pushes website out to destination (-d required if bakefile.json not present)"
+    $stderr.puts "  -d, --dest        destination [protocol:server:uid:pwd]"
+    $stderr.puts "  -v, --verbose     outputs debugging information"
+    $stderr.puts "  -w, --helloworld  outputs example site"
+    $stderr.puts "  -l, --log <file>  captures all output to file"
     exit(2)
   end
 
@@ -181,4 +182,4 @@ class Bake
 
 end
 
-Bake.new()
+Bake.new
