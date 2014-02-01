@@ -36,9 +36,20 @@
 <h3>
 <a name="bake-is-ruby-based" class="anchor" href="#bake-is-ruby-based"><span class="octicon octicon-link"></span></a>bake is ruby-based</h3>
 
-<p>'bake' will assemble a web site give the specified build file (usually bakefile.json); concatenating the header/footer for each page set.</p>
+<p>'bake' will assemble a web site given the specified build file (usually bakefile.json); concatenating the header/footer for each page set.</p>
 
 <h3>
+<a name="to-do" class="anchor" href="#to-do"><span class="octicon octicon-link"></span></a>to do:</h3>
+
+<ul>
+<li>include pre- and post- hook scripts for customization</li>
+<li>include publishing to various deployments (ftp, dropbox, etc.)</li>
+<li>check-in, push automatically</li>
+<li>version number increment and auto-label</li>
+<li>cross-language compilation</li>
+<li>verbose output</li>
+<li>capture to log</li>
+</ul><h3>
 <a name="usage" class="anchor" href="#usage"><span class="octicon octicon-link"></span></a>usage</h3>
 
 <p>Copyright 2014. CSR Development, Co. Distributed under the GNU General Public License.
@@ -61,25 +72,15 @@ redistribute it under certain conditions.</p>
 
 <pre><code>{
     /* bakefile.json - example build file */
-
     "exclude_files" : "",
-
     "pre_execute" : "",
-
     "post_execute" :  "",
-
     "output_dir" : "website",
-
     "static_dir" : "static",
-
     "header": "header.html",
-
     "footer": "footer.html",
-
     "pages" : ["index.html", "home.html"],
-
     "flags" : {
-
         "publish" :
         {
             "publish" : "true",
