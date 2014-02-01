@@ -1,34 +1,34 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>bake by gcraig</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
 
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
+
+    <title>bake by gcraig</title>
   </head>
+
   <body>
-    <div class="wrapper">
-      <header>
+    <header>
+      <div class="inner">
         <h1>bake</h1>
-        <p>builds and concatenates static websites from a list of templates</p>
+        <h2>builds and concatenates static websites from a list of templates</h2>
+        <a href="https://github.com/gcraig/bake" class="button"><small>View project on</small>GitHub</a>
+      </div>
+    </header>
 
-        <p class="view"><a href="https://github.com/gcraig/bake">View the Project on GitHub <small>gcraig/bake</small></a></p>
-
-
-        <ul>
-          <li><a href="https://github.com/gcraig/bake/zipball/master">Download <strong>ZIP File</strong></a></li>
-          <li><a href="https://github.com/gcraig/bake/tarball/master">Download <strong>TAR Ball</strong></a></li>
-          <li><a href="https://github.com/gcraig/bake">View On <strong>GitHub</strong></a></li>
-        </ul>
-      </header>
-      <section>
-        <p><img src="https://raw2.github.com/gcraig/bake/master/img/bake.png" alt="bake"></p>
+    <div id="content-wrapper">
+      <div class="inner clearfix">
+        <section id="main-content">
+          <p><img src="https://raw2.github.com/gcraig/bake/master/img/bake.png" alt="bake"></p>
 
 <h3>
 <a name="bake-is-ruby-based" class="anchor" href="#bake-is-ruby-based"><span class="octicon octicon-link"></span></a>bake is ruby-based</h3>
@@ -68,36 +68,48 @@ redistribute it under certain conditions.</p>
 <h3>
 <a name="sample-bakefilejson" class="anchor" href="#sample-bakefilejson"><span class="octicon octicon-link"></span></a>sample bakefile.json</h3>
 
-<pre><code>{
-    /* bakefile.json - example build file */
-    "exclude_files" : "",
-    "pre_execute" : "",
-    "post_execute" :  "",
-    "output_dir" : "website",
-    "static_dir" : "static",
-    "header": "header.html",
-    "footer": "footer.html",
-    "pages" : ["index.html", "home.html"],
-    "flags" : {
-        "publish" :
-        {
-            "publish" : "true",
-            "archive" : "true",
-            "publish_server" : "ftp.server.com",
-            "publish_type" : "ftp",
-            "uid" : "uid",
-            "pwd" : "pwd"
-        }
-    }
-}
-</code></pre>
-      </section>
-      <footer>
-        <p>This project is maintained by <a href="https://github.com/gcraig">gcraig</a></p>
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
-      </footer>
+<div class="highlight highlight-JSON"><pre><span class="p">{</span>
+    <span class="err">/*</span> <span class="err">bakefile.json</span> <span class="err">-</span> <span class="err">example</span> <span class="err">build</span> <span class="err">file</span> <span class="err">*/</span>
+    <span class="nt">"exclude_files"</span> <span class="p">:</span> <span class="s2">""</span><span class="p">,</span>
+    <span class="nt">"pre_execute"</span> <span class="p">:</span> <span class="s2">""</span><span class="p">,</span>
+    <span class="nt">"post_execute"</span> <span class="p">:</span>  <span class="s2">""</span><span class="p">,</span>
+    <span class="nt">"output_dir"</span> <span class="p">:</span> <span class="s2">"website"</span><span class="p">,</span>
+    <span class="nt">"static_dir"</span> <span class="p">:</span> <span class="s2">"static"</span><span class="p">,</span>
+    <span class="nt">"header"</span><span class="p">:</span> <span class="s2">"header.html"</span><span class="p">,</span>
+    <span class="nt">"footer"</span><span class="p">:</span> <span class="s2">"footer.html"</span><span class="p">,</span>
+    <span class="nt">"pages"</span> <span class="p">:</span> <span class="p">[</span><span class="s2">"index.html"</span><span class="p">,</span> <span class="s2">"home.html"</span><span class="p">],</span>
+    <span class="nt">"flags"</span> <span class="p">:</span> <span class="p">{</span>
+        <span class="nt">"publish"</span> <span class="p">:</span>
+        <span class="p">{</span>
+            <span class="nt">"publish"</span> <span class="p">:</span> <span class="s2">"true"</span><span class="p">,</span>
+            <span class="nt">"archive"</span> <span class="p">:</span> <span class="s2">"true"</span><span class="p">,</span>
+            <span class="nt">"publish_server"</span> <span class="p">:</span> <span class="s2">"ftp.server.com"</span><span class="p">,</span>
+            <span class="nt">"publish_type"</span> <span class="p">:</span> <span class="s2">"ftp"</span><span class="p">,</span>
+            <span class="nt">"uid"</span> <span class="p">:</span> <span class="s2">"uid"</span><span class="p">,</span>
+            <span class="nt">"pwd"</span> <span class="p">:</span> <span class="s2">"pwd"</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+        </section>
+
+        <aside id="sidebar">
+          <a href="https://github.com/gcraig/bake/zipball/master" class="button">
+            <small>Download</small>
+            .zip file
+          </a>
+          <a href="https://github.com/gcraig/bake/tarball/master" class="button">
+            <small>Download</small>
+            .tar.gz file
+          </a>
+
+          <p class="repo-owner"><a href="https://github.com/gcraig/bake"></a> is maintained by <a href="https://github.com/gcraig">gcraig</a>.</p>
+
+          <p>This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
+        </aside>
+      </div>
     </div>
-    <script src="javascripts/scale.fix.js"></script>
-    
+
+  
   </body>
 </html>
